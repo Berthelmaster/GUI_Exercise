@@ -23,5 +23,15 @@ namespace SWD_GUI_assignment
         {
             InitializeComponent();
         }
+
+        private void saveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //Add debtor with name and value
+        }
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //return to debtor overview
+        }
     }
 }
