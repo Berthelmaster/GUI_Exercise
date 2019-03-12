@@ -1,0 +1,29 @@
+﻿<Window x:Class="BMICalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMICalculator"
+        xmlns:viewModel="clr-namespace:BMICalculator.ViewModel"
+        mc:Ignorable="d"
+        Title="BMI Calculator" Height="195.098" Width="220.098"
+        DataContext="{Binding Source={StaticResource BmiViewModelLocator}, Path=BmiViewModel}">
+    <!--<Window.DataContext>
+        <viewModel:BMIViewModel/>
+    </Window.DataContext>-->
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="78,17,0,0" 
+                 TextWrapping="Wrap" Text="{Binding Path=Weight, StringFormat=F1}" VerticalAlignment="Top" 
+                 Width="80"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="78,52,0,0" TextWrapping="Wrap" Text="{Binding Path =Height, StringFormat=F1}" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Height" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
+        <Button Content="CalculateBMI" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="188"
+                Command="{Binding CalcBMICommand, Mode=OneTime}"/>
+        <Label Content="BMI:" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="78,129,0,0" TextWrapping="Wrap" Text="{Binding Path=BMI, Mode=OneWay}" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Kg" HorizontalAlignment="Left" Margin="167,13,0,0" VerticalAlignment="Top"/>
+        <Label Content="m" HorizontalAlignment="Left" Margin="167,52,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
