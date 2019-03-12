@@ -8,5 +8,6 @@ namespace SWD_GUI_assignment.ViewModel
 {
 	class MainWindowViewModel
 	{
+
 	}
 }
