@@ -13,6 +13,13 @@ namespace SWD_GUI_assignment.ViewModel
 {
     public class AddDebtorViewModel: INotifyPropertyChanged
     {
+        private AccountCollection _accs;
+
+        public AddDebtorViewModel(ref AccountCollection accs)
+        {
+            _accs = accs;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -52,8 +59,7 @@ namespace SWD_GUI_assignment.ViewModel
         {
             if (AccountModel != null)
             {
-                //SomeList.Add(AccountModel);
-                //this.close;
+                _accs.AddNewDebter(AccountModel);
             }
         }
 

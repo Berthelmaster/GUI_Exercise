@@ -7,18 +7,25 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using System.Windows.Media.Animation;
 using SWD_GUI_assignment.Model;
 
 namespace SWD_GUI_assignment.ViewModel
 {
 	public class MainWindowViewModel: INotifyPropertyChanged
 	{
-        public AccountCollection accs = new AccountCollection();
+        public AccountCollection accounts = new AccountCollection();
 
         public MainWindowViewModel()
         {
-         CurrentDebtor = accs.Debtors[0];
+         CurrentDebtor = accounts.Debtors[0];
         }
+
+       public AccountCollection Accounts
+       {
+           get { return accounts; }
+       }
+
 
         AccountModel currentDebtor = null;
         public AccountModel CurrentDebtor
@@ -34,7 +41,6 @@ namespace SWD_GUI_assignment.ViewModel
             }
         }
 
-
         // On Proberty Changed
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
@@ -43,17 +49,6 @@ namespace SWD_GUI_assignment.ViewModel
         }
 
         //Commands
-        public void AddDebter_OnClick()
-        { 
-            AddDebtor addDebtorWin = new AddDebtor(accs);
-            addDebtorWin.Show();
-        }
-
-        public void OverView_OnClick()
-        {
-            DebtorOverview overViewWin = new DebtorOverview(accs,CurrentDebtor);
-            overViewWin.Show();
-        }
 
         private ICommand _OpenAddDebterCommand;
 
@@ -61,7 +56,14 @@ namespace SWD_GUI_assignment.ViewModel
         {
             get
             {
-                return _OpenAddDebterCommand ?? (_OpenAddDebterCommand = new RelayCommand(AddDebter_OnClick));
+                return _OpenAddDebterCommand ?? (_OpenAddDebterCommand = new RelayCommand(()=> {
+                    var vm = new AddDebtorViewModel(ref accounts);
+
+
+
+                    var addDebtorWin = new AddDebtor();
+                    addDebtorWin.Show();
+                }));
             }
         }
 
@@ -70,7 +72,11 @@ namespace SWD_GUI_assignment.ViewModel
         {
             get
             {
-                return _OpenOverviewCommand ?? (_OpenOverviewCommand = new RelayCommand(OverView_OnClick));
+                return _OpenOverviewCommand ?? (_OpenOverviewCommand = new RelayCommand(()=>
+                {
+                    DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor);
+                    overViewWin.Show();
+                }));
             }
         }
 

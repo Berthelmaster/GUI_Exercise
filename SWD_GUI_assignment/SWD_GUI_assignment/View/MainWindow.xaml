@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel>
             <Label>Debtors</Label>
-            <ListBox ItemsSource="{Binding Path=Debtors}" 
+            <ListBox ItemsSource="{Binding Path=Accounts.Debtors}" 
                      SelectedItem="{Binding Path=CurrentDebtor}"
                      IsSynchronizedWithCurrentItem="True"
                      DisplayMemberPath="Name" 
