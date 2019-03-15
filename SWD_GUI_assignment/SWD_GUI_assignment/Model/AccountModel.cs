@@ -16,14 +16,20 @@ namespace SWD_GUI_assignment.Model
             Balance = balance;
         }
 
-
-
         public String Name { get; set; }
         
-
         public double Balance { get; set; }
-       
 
+        public void ChangeBalance(double balance)
+        {
+            DateTime currentDateTime = new DateTime();
+            currentDateTime = DateTime.Now;
+            Tuple<DateTime, double> balanceEntry = new Tuple<DateTime, double>(currentDateTime, balance);
+
+            _balanceList.Add(balanceEntry);
+
+            Balance += balance;
+        }
     }
 
 } 
