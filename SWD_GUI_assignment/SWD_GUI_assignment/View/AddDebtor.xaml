@@ -25,7 +25,7 @@
             </WrapPanel>
             <WrapPanel>
                 <Label Margin="3"
-                       Content="Name"/>
+                       Content="Value"/>
                 <TextBox Name="newDebtorValue"
                          Margin="3,5"
                          MinWidth="300"/>
@@ -34,12 +34,14 @@
                 <Button Name="saveBtn"
                         FontSize="20"
                         Content="Save"
-                        MinWidth="75" Click="saveBtn_Click"/>
+                        MinWidth="75" 
+                        Command="{Binding AddDebtorCommand}"/>
                 <Button Name="cancelBtn"
                         Margin="30,0"
                         FontSize="20"
                         Content="Cancel"
-                        MinWidth="75" Click="cancelBtn_Click"
+                        MinWidth="75" 
+                        Command="{Binding CloseCommand}"
                         />
             </WrapPanel>
         </StackPanel>

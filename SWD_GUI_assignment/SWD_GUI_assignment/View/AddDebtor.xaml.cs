@@ -31,7 +31,7 @@ namespace SWD_GUI_assignment
 
         private void cancelBtn_Click(object sender, RoutedEventArgs e)
         {
-            //return to debtor overview
+            //return to main window
         }
     }
 }
