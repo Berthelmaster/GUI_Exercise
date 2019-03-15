@@ -10,6 +10,7 @@ namespace SWD_GUI_assignment.ViewModel
 {
     public class ViewModelLocator
     {
+
         public AddDebtorViewModel AddDebtorViewModel
         {
             get { return new AddDebtorViewModel(); }

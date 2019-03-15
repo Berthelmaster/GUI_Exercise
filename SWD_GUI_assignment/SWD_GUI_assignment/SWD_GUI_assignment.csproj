@@ -68,6 +68,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AccountCollection.cs" />
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Properties\Annotations1.cs" />
     <Compile Include="View\AddDebtor.xaml.cs">

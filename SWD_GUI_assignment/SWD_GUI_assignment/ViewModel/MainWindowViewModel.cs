@@ -13,16 +13,12 @@ namespace SWD_GUI_assignment.ViewModel
 {
 	public class MainWindowViewModel: INotifyPropertyChanged
 	{
-        ObservableCollection<AccountModel> debtors;
+        private AccountCollection accs = new AccountCollection();
 
         public MainWindowViewModel()
         {
-            debtors = new ObservableCollection<AccountModel>();
-            debtors.Add(new AccountModel("Apollo", 1000000));
-            debtors.Add(new AccountModel("Jens Jensen", -200));
-            CurrentDebtor = debtors[0];
+         CurrentDebtor = accs.Debtors[0];
         }
-
 
         AccountModel currentDebtor = null;
         public AccountModel CurrentDebtor
@@ -38,18 +34,6 @@ namespace SWD_GUI_assignment.ViewModel
             }
         }
 
-        public ObservableCollection<AccountModel> Debtors
-        {
-            get
-            {
-                return debtors;
-            }
-        }
-
-        public void AddNewDebtor()
-        {
-            debtors.Add(new AccountModel("Ny Debtor",0));
-        }
 
         // On Proberty Changed
         public event PropertyChangedEventHandler PropertyChanged;
