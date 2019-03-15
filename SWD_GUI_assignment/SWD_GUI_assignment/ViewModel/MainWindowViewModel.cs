@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using BMICalculator.ViewModel;
 using SWD_GUI_assignment.Model;
 
 namespace SWD_GUI_assignment.ViewModel
