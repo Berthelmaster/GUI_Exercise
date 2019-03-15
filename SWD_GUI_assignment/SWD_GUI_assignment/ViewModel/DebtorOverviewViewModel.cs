@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SWD_GUI_assignment.ViewModel
 {
-   class DebtorOverviewViewModel
+   public class DebtorOverviewViewModel
     {
     }
 }

@@ -10,7 +10,7 @@ using SWD_GUI_assignment.Model;
 
 namespace SWD_GUI_assignment.ViewModel
 {
-    class AddDebtorViewModel: INotifyPropertyChanged
+    public class AddDebtorViewModel: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
