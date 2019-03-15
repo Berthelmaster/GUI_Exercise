@@ -24,5 +24,10 @@ namespace SWD_GUI_assignment
         {
             InitializeComponent();
         }
+
+        private void BtnAddDeb_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
