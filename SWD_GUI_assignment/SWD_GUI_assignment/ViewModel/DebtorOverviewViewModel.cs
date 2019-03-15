@@ -25,6 +25,16 @@ namespace SWD_GUI_assignment.ViewModel
             }
         }
 
+        public String BalanceList
+        {
+            get
+            {
+                _account.BalanceList[]
+                return null;
+            }
+            set { }
+        }
+
         public String Name
         {
             get => _account.Name;  
@@ -37,6 +47,8 @@ namespace SWD_GUI_assignment.ViewModel
                 }
             }
         }
+
+
 
         private void AddValue_OnClick()
         {

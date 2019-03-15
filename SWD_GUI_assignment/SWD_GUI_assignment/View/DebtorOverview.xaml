@@ -29,7 +29,8 @@
 
         <ListBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,5"
                  Height="250" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                 Name="lbxValues"/>
+                 Name="lbxValues"
+                 ItemsSource="{Binding Path=BalanceList}"/>
 
         <Button Name="CloseButton" Grid.Row="2" Grid.Column="0" Height="20" Width="50"
                 Content="Close" HorizontalAlignment="Left" VerticalAlignment="Center"
