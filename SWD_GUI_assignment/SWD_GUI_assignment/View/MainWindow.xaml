@@ -13,14 +13,17 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <ListBox ItemsSource="{Binding Path=}" 
-                     SelectedItem="{Binding Path=CurrentAgent}"
+            <Label>Debtors</Label>
+            <ListBox ItemsSource="{Binding Path=Debtors}" 
+                     SelectedItem="{Binding Path=CurrentDebtor}"
                      IsSynchronizedWithCurrentItem="True"
-                     DisplayMemberPath="CodeName" 
-                     Name="lbxAgents" 
+                     DisplayMemberPath="Name" 
+                     Name="lbxDebtors" 
                      Grid.Column="1" 
                      Margin="9"  
             />
         </StackPanel>
+        <Button Grid.Column="1" Height="23" Margin="10,20,10,10" VerticalAlignment="Top" HorizontalAlignment="Left"
+                Width="75" Name="BtnAddDeb" Click="BtnAddDeb_OnClick">Add Debtor</Button>
     </Grid>
 </Window>
