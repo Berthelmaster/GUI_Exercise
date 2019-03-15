@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddDebtor.xaml.cs">
+    <Compile Include="View\AddDebtor.xaml.cs">
       <DependentUpon>AddDebtor.xaml</DependentUpon>
     </Compile>
     <Compile Include="DebtorOverview.xaml.cs">
@@ -66,7 +66,7 @@
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="AddDebtor.xaml">
+    <Page Include="View\AddDebtor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,8 +114,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
