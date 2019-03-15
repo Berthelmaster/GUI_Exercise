@@ -6,5 +6,8 @@
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
         <viewModel:ViewModelLocator x:Key="DebtorViewModelLocator"/>
+        <viewModel:ViewModelLocator x:Key="AddDebtorViewModelLocator"/>
+
     </Application.Resources>
+
 </Application>
