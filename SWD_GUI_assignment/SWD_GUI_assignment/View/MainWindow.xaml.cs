@@ -24,5 +24,23 @@ namespace SWD_GUI_assignment
         {
             InitializeComponent();
         }
+
+        private void BtnAddDeb_OnClick(object sender, RoutedEventArgs e)
+        {
+            AddDebtor addDebtorWin = new AddDebtor();
+            addDebtorWin.Show();
+        }
+
+        private void BtnForward_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (lbxDebtors.SelectedIndex < lbxDebtors.Items.Count - 1)
+                lbxDebtors.SelectedIndex = ++lbxDebtors.SelectedIndex;
+        }
+
+        private void BtnBack_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (lbxDebtors.SelectedIndex > 0)
+                lbxDebtors.SelectedIndex = --lbxDebtors.SelectedIndex;
+        }
     }
 }

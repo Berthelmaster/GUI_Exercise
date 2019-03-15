@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SWD_GUI_assignment.Model;
 using SWD_GUI_assignment.ViewModel;
 
-namespace BMICalculator.ViewModel
+namespace SWD_GUI_assignment.ViewModel
 {
     public class ViewModelLocator
     {
