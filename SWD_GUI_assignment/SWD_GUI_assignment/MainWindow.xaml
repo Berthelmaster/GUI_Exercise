@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:SWD_GUI_assignment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <ListBox ItemsSource="{Binding Path=}" 
+                     SelectedItem="{Binding Path=CurrentAgent}"
+                     IsSynchronizedWithCurrentItem="True"
+                     DisplayMemberPath="CodeName" 
+                     Name="lbxAgents" 
+                     Grid.Column="1" 
+                     Margin="9"  
+            />
+        </StackPanel>
     </Grid>
 </Window>
