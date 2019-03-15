@@ -53,13 +53,13 @@ namespace SWD_GUI_assignment.ViewModel
             if (AccountModel != null)
             {
                 //SomeList.Add(AccountModel);
-                this.close;
+                //this.close;
             }
         }
 
         public void CloseApplication_OnClick()
         {
-            this.Close;
+            //this.Close;
         }
 
 
