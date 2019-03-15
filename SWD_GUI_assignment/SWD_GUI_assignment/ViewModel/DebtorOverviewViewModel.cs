@@ -10,24 +10,30 @@ namespace SWD_GUI_assignment.ViewModel
 {
    public class DebtorOverviewViewModel
    {
-       public AccountCollection accounts;
-        public DebtorOverviewViewModel(ref AccountCollection accs)
+       public AccountModel _account;
+        public DebtorOverviewViewModel(ref AccountModel acccount)
         {
-            accounts = accs;
+            _account = acccount;
         }
 
-        private ICommand _CloseBtnCommand;
-        public ICommand CloseBtnCommand
+        private ICommand _AddValueCommand;
+        public ICommand AddValueCommand
         {
             get
             {
-                return _CloseBtnCommand ?? (_CloseBtnCommand = new RelayCommand(CloseBtn_OnClick));
+                return _AddValueCommand ?? (_AddValueCommand = new RelayCommand(AddValue_OnClick));
             }
         }
 
-        private void CloseBtn_OnClick()
+        public String Name
         {
+            get { return _account.Name;  }
+            set {}
+        }
 
+        private void AddValue_OnClick()
+        {
+            _account.ChangeBalance();
         }
 
 
