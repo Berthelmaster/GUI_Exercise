@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SWD_GUI_assignment.Model
 {
-    class AccountModel
+    public class AccountModel
     {
         List<Tuple<DateTime,double>> _balanceList = new List<Tuple<DateTime, double>>();
 
@@ -15,6 +15,8 @@ namespace SWD_GUI_assignment.Model
             Name = name;
             Balance = balance;
         }
+
+
 
         public String Name { get; set; }
         
