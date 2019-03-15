@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AccountModel.cs" />
     <Compile Include="View\AddDebtor.xaml.cs">
       <DependentUpon>AddDebtor.xaml</DependentUpon>
     </Compile>
@@ -88,7 +89,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\DebtbookModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

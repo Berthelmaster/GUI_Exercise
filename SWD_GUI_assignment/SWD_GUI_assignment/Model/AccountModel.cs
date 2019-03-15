@@ -8,26 +8,17 @@ namespace SWD_GUI_assignment.Model
 {
     class AccountModel
     {
-        private string _name;
-        private double _balance;
-
         public AccountModel(string name, double balance = 0)
         {
-            _name = name;
-            _balance = balance;
+            Name = name;
+            Balance = balance;
         }
 
-        public String Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        public String Name { get; set; }
+        
 
-        public double Balance
-        {
-            get { return _balance; }
-            set { _balance = value; }
-        }
+        public double Balance { get; set; }
+       
 
     }
 
