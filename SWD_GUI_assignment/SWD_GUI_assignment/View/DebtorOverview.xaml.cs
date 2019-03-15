@@ -21,23 +21,20 @@ namespace SWD_GUI_assignment
     /// </summary>
     public partial class DebtorOverview : Window
     {
-        private AccountModel _account;
-
         public DebtorOverview(AccountModel account)
         {
-            //_account = account;
-            //Name.Content = _account.Name; 
             InitializeComponent();
         }
 
-        //private void AddButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    _account.ChangeBalance(double.Parse(Value.Text));
-        //}
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            lbxValues.Items.Refresh();
+        }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            
         }
     }
 }

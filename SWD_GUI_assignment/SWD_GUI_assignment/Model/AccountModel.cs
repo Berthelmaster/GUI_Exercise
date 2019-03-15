@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace SWD_GUI_assignment.Model
 {
     public class AccountModel
     {
-        List<Tuple<DateTime,double>> _balanceList = new List<Tuple<DateTime, double>>();
+        ObservableCollection<Tuple<DateTime,double>> _balanceList = new ObservableCollection<Tuple<DateTime, double>>();
+
+        
 
         public AccountModel(string name, double balance = 0)
         {
@@ -16,7 +19,7 @@ namespace SWD_GUI_assignment.Model
             ChangeBalance(balance);
         }
 
-        public List<Tuple<DateTime, double>> BalanceList
+        public ObservableCollection<Tuple<DateTime, double>> BalanceList
         {
             get { return _balanceList; }
             set { }

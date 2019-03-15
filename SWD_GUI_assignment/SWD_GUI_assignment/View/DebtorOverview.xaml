@@ -39,11 +39,12 @@
         <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top">
             <TextBox Name="Value" Grid.Row="1" Grid.Column="2" Width="50"
                      HorizontalAlignment="Left" VerticalAlignment="Top"
-                     Margin="10,5,20,5" Text="Value"/>
+                     Margin="10,5,20,5" Text="{Binding Path = ValueToAdd}"/>
 
             <Button Name="AddButton" Grid.Row="1" Grid.Column="2" Height="20" Width="30"
                     Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Margin="10,5,20,5" />
+                    Margin="10,5,20,5" 
+                    Command="{Binding AddValueCommand}" Click="AddButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
