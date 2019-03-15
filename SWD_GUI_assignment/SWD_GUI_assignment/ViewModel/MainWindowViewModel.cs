@@ -74,7 +74,7 @@ namespace SWD_GUI_assignment.ViewModel
             {
                 return _OpenOverviewCommand ?? (_OpenOverviewCommand = new RelayCommand(()=>
                 {
-                    var vm = new DebtorOverviewViewModel(ref);
+                    var vm = new DebtorOverviewViewModel(ref currentDebtor);
 
                     DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor);
                     overViewWin.Show();
