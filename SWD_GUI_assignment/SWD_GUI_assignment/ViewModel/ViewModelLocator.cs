@@ -17,10 +17,10 @@ namespace SWD_GUI_assignment.ViewModel
          }
          */
 
-        public DebtorOverviewViewModel DebtorOverviewViewModel
-        {
-            get { return new DebtorOverviewViewModel(); }
-        }
+        //public DebtorOverviewViewModel DebtorOverviewViewModel
+        //{
+        //    get { return new DebtorOverviewViewModel(); }
+        //}
 
         public MainWindowViewModel MainWindowViewModel
         {

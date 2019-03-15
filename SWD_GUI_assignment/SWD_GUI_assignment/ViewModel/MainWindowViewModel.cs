@@ -76,7 +76,10 @@ namespace SWD_GUI_assignment.ViewModel
                 {
                     var vm = new DebtorOverviewViewModel(ref currentDebtor);
 
-                    DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor);
+                    DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor)
+                        {
+                            DataContext = vm 
+                        };
                     overViewWin.Show();
                 }));
             }

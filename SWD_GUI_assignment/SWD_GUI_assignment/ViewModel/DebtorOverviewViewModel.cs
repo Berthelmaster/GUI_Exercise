@@ -27,13 +27,20 @@ namespace SWD_GUI_assignment.ViewModel
 
         public String Name
         {
-            get { return _account.Name;  }
-            set {}
+            get => _account.Name;  
+            set
+            {
+                if (value != _account.Name)
+                {
+                    _account.Name = value;
+                    //OnPropertyChanged();
+                }
+            }
         }
 
         private void AddValue_OnClick()
         {
-            _account.ChangeBalance();
+            //_account.ChangeBalance();
         }
 
 
