@@ -31,7 +31,7 @@
             <Button Height="23" Margin="10,10,10,10" 
                     VerticalAlignment="Top" HorizontalAlignment="Left"
                     Name="btnOverView" Width="75"
-                    Command="{Binding OverviewCommand}"
+                    Command="{Binding OpenOverviewCommand}"
                     >Overview
             </Button>
                 <Button Height="23" Margin="10" 
@@ -43,6 +43,6 @@
             </WrapPanel>
         </StackPanel>
         <Button Grid.Column="1" Height="23" Margin="10,20,10,10" VerticalAlignment="Top" HorizontalAlignment="Left"
-                Width="75" Name="BtnAddDeb" Command="{Binding AddDebterCommand}">Add Debtor</Button>
+                Width="75" Name="BtnAddDeb" Command="{Binding OpenAddDebterCommand}">Add Debtor</Button>
     </Grid>
 </Window>

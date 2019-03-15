@@ -26,12 +26,12 @@ namespace SWD_GUI_assignment
 
         private void saveBtn_Click(object sender, RoutedEventArgs e)
         {
-            //Add debtor with name and value
+            this.Close();
         }
 
         private void cancelBtn_Click(object sender, RoutedEventArgs e)
         {
-            //return to debtor overview
+            this.Close();
         }
     }
 }

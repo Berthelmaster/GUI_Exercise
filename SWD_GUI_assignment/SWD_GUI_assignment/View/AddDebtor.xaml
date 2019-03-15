@@ -21,25 +21,30 @@
                        Content="Name"/>
                 <TextBox Name="newDebtorName"
                          Margin="3,5"
-                         MinWidth="300"/>
+                         MinWidth="300"
+                         Text="{Binding Path=Name}"/>
             </WrapPanel>
             <WrapPanel>
                 <Label Margin="3"
-                       Content="Name"/>
+                       Content="Value"/>
                 <TextBox Name="newDebtorValue"
                          Margin="3,5"
-                         MinWidth="300"/>
+                         MinWidth="300"
+                         Text="{Binding Path=Balance}"/>
             </WrapPanel>
             <WrapPanel Margin="51,0,444.6,0">
                 <Button Name="saveBtn"
                         FontSize="20"
                         Content="Save"
-                        MinWidth="75" Click="saveBtn_Click"/>
+                        MinWidth="75" 
+                        Command="{Binding AddDebtorCommand}"
+                        Click="saveBtn_Click"/>
                 <Button Name="cancelBtn"
                         Margin="30,0"
                         FontSize="20"
                         Content="Cancel"
-                        MinWidth="75" Click="cancelBtn_Click"
+                        MinWidth="75" 
+                        Click="cancelBtn_Click"
                         />
             </WrapPanel>
         </StackPanel>
