@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace SWD_GUI_assignment.Model
         {
             get { return _balanceList; }
             set { }
+        }
+
+        public String Information
+        {
+            get
+            {
+                return (Name +"\t "+ Balance.ToString());
+            }
         }
 
         public String Name { get; set; }
