@@ -12,8 +12,14 @@ namespace SWD_GUI_assignment.Model
 
         public AccountModel(string name, double balance = 0)
         {
-            Name = name;
-            Balance = balance;
+            Name = name; 
+            ChangeBalance(balance);
+        }
+
+        public List<Tuple<DateTime, double>> BalanceList
+        {
+            get { return _balanceList; }
+            set { }
         }
 
         public String Name { get; set; }
