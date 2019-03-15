@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace BMICalculator.ViewModel
+namespace SWD_GUI_assignment.ViewModel
 {
     // From https://archive.codeplex.com/?p=mvvmfoundation
 
