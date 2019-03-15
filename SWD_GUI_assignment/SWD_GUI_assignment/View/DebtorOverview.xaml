@@ -33,7 +33,7 @@
 
         <Button Name="CloseButton" Grid.Row="2" Grid.Column="0" Height="20" Width="50"
                 Content="Close" HorizontalAlignment="Left" VerticalAlignment="Center"
-                Margin="10,5,5,10" Click="CloseButton_Click"/>
+                Margin="10,5,5,10" />
 
         
         <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top">
@@ -43,7 +43,7 @@
 
             <Button Name="AddButton" Grid.Row="1" Grid.Column="2" Height="20" Width="30"
                     Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Margin="10,5,20,5" Click="AddButton_Click"/>
+                    Margin="10,5,20,5" />
         </StackPanel>
     </Grid>
 </Window>
