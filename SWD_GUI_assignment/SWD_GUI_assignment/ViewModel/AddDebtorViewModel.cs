@@ -49,7 +49,7 @@ namespace SWD_GUI_assignment.ViewModel
             {
                 if (value != AccountModel.Balance)
                 {
-                    AccountModel.Balance = value;
+                    AccountModel.ChangeBalance(value);
                     OnPropertyChanged();
                 }
             }

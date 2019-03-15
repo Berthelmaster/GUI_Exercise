@@ -18,7 +18,7 @@
             <ListBox ItemsSource="{Binding Path=Accounts.Debtors}" 
                      SelectedItem="{Binding Path=CurrentDebtor}"
                      IsSynchronizedWithCurrentItem="True"
-                     DisplayMemberPath="Name" 
+                     DisplayMemberPath="Information" 
                      Name="lbxDebtors" 
                      Grid.Column="1" 
                      Margin="9"  
