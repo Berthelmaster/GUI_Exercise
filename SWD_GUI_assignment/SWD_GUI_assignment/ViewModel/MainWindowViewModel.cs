@@ -13,7 +13,7 @@ namespace SWD_GUI_assignment.ViewModel
 {
 	public class MainWindowViewModel: INotifyPropertyChanged
 	{
-        private AccountCollection accs = new AccountCollection();
+        public AccountCollection accs = new AccountCollection();
 
         public MainWindowViewModel()
         {
@@ -45,13 +45,13 @@ namespace SWD_GUI_assignment.ViewModel
         //Commands
         public void AddDebter_OnClick()
         { 
-            AddDebtor addDebtorWin = new AddDebtor();
+            AddDebtor addDebtorWin = new AddDebtor(accs);
             addDebtorWin.Show();
         }
 
         public void OverView_OnClick()
         {
-            DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor);
+            DebtorOverview overViewWin = new DebtorOverview(accs,CurrentDebtor);
             overViewWin.Show();
         }
 
