@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BMICalculator.Model;
+using SWD_GUI_assignment.Model;
 using SWD_GUI_assignment.ViewModel;
 
 namespace BMICalculator.ViewModel
