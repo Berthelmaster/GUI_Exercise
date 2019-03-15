@@ -20,7 +20,6 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
-
         <Label Name="Overview" Grid.Column="0" Grid.Row="0" Content="Overview for: " 
                HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,5,5,5"/>
 
@@ -33,9 +32,8 @@
 
         <Button Name="CloseButton" Grid.Row="2" Grid.Column="0" Height="20" Width="50"
                 Content="Close" HorizontalAlignment="Left" VerticalAlignment="Center"
-                Margin="10,5,5,10" />
+                Margin="10,5,5,10" Click="CloseButton_Click" />
 
-        
         <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top">
             <TextBox Name="Value" Grid.Row="1" Grid.Column="2" Width="50"
                      HorizontalAlignment="Left" VerticalAlignment="Top"

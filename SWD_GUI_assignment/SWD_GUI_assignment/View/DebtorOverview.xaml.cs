@@ -35,9 +35,9 @@ namespace SWD_GUI_assignment
         //    _account.ChangeBalance(double.Parse(Value.Text));
         //}
 
-        //private void CloseButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    this.Close();
-        //}
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
