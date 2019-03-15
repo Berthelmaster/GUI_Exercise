@@ -7,7 +7,7 @@
     <Application.Resources>
         <viewModel:ViewModelLocator x:Key="DebtorViewModelLocator"/>
         <viewModel:ViewModelLocator x:Key="AddDebtorViewModelLocator"/>
-
+        <viewModel:ViewModelLocator x:Key="DebtorOverviewViewModelLocator"/>
     </Application.Resources>
 
 </Application>
