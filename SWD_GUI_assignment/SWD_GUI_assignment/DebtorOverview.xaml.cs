@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SWD_GUI_assignment
+namespace Debtoroverview
 {
     /// <summary>
-    /// Interaction logic for DebtorOverview.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class DebtorOverview : Window
+    public partial class MainWindow : Window
     {
-        public DebtorOverview()
+        public MainWindow()
         {
             InitializeComponent();
         }
