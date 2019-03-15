@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using SWD_GUI_assignment.Model;
 
 namespace SWD_GUI_assignment.ViewModel
 {
    public class DebtorOverviewViewModel
-    {
-        public DebtorOverviewViewModel()
+   {
+       public AccountCollection accounts;
+        public DebtorOverviewViewModel(ref AccountCollection accs)
         {
-
+            accounts = accs;
         }
 
         private ICommand _CloseBtnCommand;
