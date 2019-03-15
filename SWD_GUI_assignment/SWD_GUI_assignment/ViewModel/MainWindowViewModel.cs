@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using BMICalculator.ViewModel;
 using SWD_GUI_assignment.Model;
 
 namespace SWD_GUI_assignment.ViewModel
@@ -50,10 +52,44 @@ namespace SWD_GUI_assignment.ViewModel
             debtors.Add(new AccountModel("Ny Debtor",0));
         }
 
+        // On Proberty Changed
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        //Commands
+        public void AddDebter_OnClick()
+        { 
+            AddDebtor addDebtorWin = new AddDebtor();
+            addDebtorWin.Show();
+        }
+
+        public void OverView_OnClick()
+        {
+            DebtorOverview overViewWin = new DebtorOverview(CurrentDebtor);
+            overViewWin.Show();
+        }
+
+        private ICommand _AddDebterCommand;
+
+        public ICommand AddDebterCommand
+        {
+            get
+            {
+                return _AddDebterCommand ?? (_AddDebterCommand = new RelayCommand(AddDebter_OnClick));
+            }
+        }
+
+        private ICommand _OverviewCommand;
+        public ICommand OverviewCommand
+        {
+            get
+            {
+                return _OverviewCommand ?? (_OverviewCommand = new RelayCommand(OverView_OnClick));
+            }
+        }
+
     }
 }

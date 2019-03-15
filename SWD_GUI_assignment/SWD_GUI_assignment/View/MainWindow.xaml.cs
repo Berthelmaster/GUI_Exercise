@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SWD_GUI_assignment.ViewModel;
 
 namespace SWD_GUI_assignment
 {
@@ -25,12 +26,6 @@ namespace SWD_GUI_assignment
             InitializeComponent();
         }
 
-        private void BtnAddDeb_OnClick(object sender, RoutedEventArgs e)
-        {
-            AddDebtor addDebtorWin = new AddDebtor();
-            addDebtorWin.Show();
-        }
-
         private void BtnForward_OnClick(object sender, RoutedEventArgs e)
         {
             if (lbxDebtors.SelectedIndex < lbxDebtors.Items.Count - 1)
@@ -42,5 +37,7 @@ namespace SWD_GUI_assignment
             if (lbxDebtors.SelectedIndex > 0)
                 lbxDebtors.SelectedIndex = --lbxDebtors.SelectedIndex;
         }
+
+        
     }
 }
