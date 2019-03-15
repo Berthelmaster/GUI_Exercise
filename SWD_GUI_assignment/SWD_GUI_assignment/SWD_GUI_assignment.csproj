@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="View\AddDebtor.xaml.cs">
       <DependentUpon>AddDebtor.xaml</DependentUpon>
     </Compile>
