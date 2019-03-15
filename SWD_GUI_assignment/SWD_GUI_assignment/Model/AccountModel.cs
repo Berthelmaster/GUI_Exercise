@@ -16,7 +16,11 @@ namespace SWD_GUI_assignment.Model
             ChangeBalance(balance);
         }
 
-        public List<Tuple<DateTime, double>> BalanceList { get; set;  }
+        public List<Tuple<DateTime, double>> BalanceList
+        {
+            get { return _balanceList; }
+            set { }
+        }
 
         public String Name { get; set; }
         

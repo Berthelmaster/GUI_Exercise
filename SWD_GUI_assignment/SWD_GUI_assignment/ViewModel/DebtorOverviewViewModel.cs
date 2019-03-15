@@ -25,29 +25,17 @@ namespace SWD_GUI_assignment.ViewModel
             }
         }
 
-        public String BalanceList
+        public List<Tuple<DateTime, double>> BalanceList
         {
-            get
-            {
-                _account.BalanceList[]
-                return null;
-            }
+            get => _account.BalanceList;
             set { }
         }
 
         public String Name
         {
-            get => _account.Name;  
-            set
-            {
-                if (value != _account.Name)
-                {
-                    _account.Name = value;
-                    //OnPropertyChanged();
-                }
-            }
+            get => _account.Name;
+            set { }
         }
-
 
 
         private void AddValue_OnClick()
