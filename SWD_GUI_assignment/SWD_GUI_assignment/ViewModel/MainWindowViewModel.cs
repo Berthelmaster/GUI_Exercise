@@ -72,22 +72,22 @@ namespace SWD_GUI_assignment.ViewModel
             overViewWin.Show();
         }
 
-        private ICommand _AddDebterCommand;
+        private ICommand _OpenAddDebterCommand;
 
-        public ICommand AddDebterCommand
+        public ICommand OpenAddDebterCommand
         {
             get
             {
-                return _AddDebterCommand ?? (_AddDebterCommand = new RelayCommand(AddDebter_OnClick));
+                return _OpenAddDebterCommand ?? (_OpenAddDebterCommand = new RelayCommand(AddDebter_OnClick));
             }
         }
 
-        private ICommand _OverviewCommand;
-        public ICommand OverviewCommand
+        private ICommand _OpenOverviewCommand;
+        public ICommand OpenOverviewCommand
         {
             get
             {
-                return _OverviewCommand ?? (_OverviewCommand = new RelayCommand(OverView_OnClick));
+                return _OpenOverviewCommand ?? (_OpenOverviewCommand = new RelayCommand(OverView_OnClick));
             }
         }
 
