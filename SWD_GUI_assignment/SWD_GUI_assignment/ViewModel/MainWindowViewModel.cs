@@ -16,6 +16,7 @@ namespace SWD_GUI_assignment.ViewModel
 	{
         public AccountCollection accounts = new AccountCollection();
 
+
         public MainWindowViewModel()
         {
          CurrentDebtor = accounts.Debtors[0];
@@ -26,6 +27,7 @@ namespace SWD_GUI_assignment.ViewModel
            get { return accounts; }
        }
 
+       
 
         AccountModel currentDebtor = null;
         public AccountModel CurrentDebtor
@@ -58,10 +60,12 @@ namespace SWD_GUI_assignment.ViewModel
             {
                 return _OpenAddDebterCommand ?? (_OpenAddDebterCommand = new RelayCommand(()=> {
                     var vm = new AddDebtorViewModel(ref accounts);
+                    
+                    var addDebtorWin = new AddDebtor()
+                        {
+                            DataContext = vm
+                        };
 
-
-
-                    var addDebtorWin = new AddDebtor();
                     addDebtorWin.Show();
                 }));
             }

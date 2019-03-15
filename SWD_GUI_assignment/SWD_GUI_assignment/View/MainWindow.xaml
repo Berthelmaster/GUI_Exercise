@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         DataContext="{Binding Source={StaticResource DebtorViewModelLocator},Path=MainWindowViewModel}">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -22,6 +23,7 @@
                      Grid.Column="1" 
                      Margin="9"  
             />
+            
             <WrapPanel>
             <Button Height="23" Margin="10,10,10,10" 
                     VerticalAlignment="Top" HorizontalAlignment="Left"
