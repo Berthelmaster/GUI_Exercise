@@ -15,14 +15,13 @@ namespace SWD_GUI_assignment.ViewModel
 {
    public class DebtorOverviewViewModel : INotifyPropertyChanged
    {
+        public event PropertyChangedEventHandler PropertyChanged;
 
-       public event PropertyChangedEventHandler PropertyChanged;
-
-       [NotifyPropertyChangedInvocator]
-       protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-       {
-           PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-       }
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public AccountModel _account;
         public DebtorOverviewViewModel(ref AccountModel acccount)
@@ -42,12 +41,11 @@ namespace SWD_GUI_assignment.ViewModel
 
         private void AddValue_OnClick()
         {
-           _account.ChangeBalance(double.Parse(ValueToAdd));
-           OnPropertyChanged();
+            _account.ChangeBalance(double.Parse(ValueToAdd));
+            OnPropertyChanged();
         }
 
         private string _valueToAdd;
-
         public string ValueToAdd
         {
             get { return _valueToAdd; }
