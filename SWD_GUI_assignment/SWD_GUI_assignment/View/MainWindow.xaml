@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:SWD_GUI_assignment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        DataContext="{Binding Source={StaticResource DebtorViewModelLocator},Path=MainWindowViewModel}">
+        DataContext="{Binding Source={StaticResource DebtorViewModelLocator},Path=MainWindowViewModel}"
+        Window.MouseEnter="MainWindow_OnGotFocus">
+        
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -21,8 +23,8 @@
                      DisplayMemberPath="Information" 
                      Name="lbxDebtors" 
                      Grid.Column="1" 
-                     Margin="9"  
-            />
+                     Margin="9"/>
+                      
             
             <WrapPanel>
             <Button Height="23" Margin="10,10,10,10" 

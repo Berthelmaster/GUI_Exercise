@@ -85,6 +85,7 @@ namespace SWD_GUI_assignment.ViewModel
                             DataContext = vm 
                         };
                     overViewWin.Show();
+                   
                 }));
             }
         }

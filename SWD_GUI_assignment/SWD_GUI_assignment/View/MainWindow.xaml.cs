@@ -39,6 +39,10 @@ namespace SWD_GUI_assignment
                 lbxDebtors.SelectedIndex = --lbxDebtors.SelectedIndex;
         }
 
-        
+
+        private void MainWindow_OnGotFocus(object sender, RoutedEventArgs e)
+        {
+            lbxDebtors.Items.Refresh();
+        }
     }
 }
