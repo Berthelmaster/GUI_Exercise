@@ -81,7 +81,6 @@
     <Compile Include="ViewModel\DebtorOverviewViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="View\AddDebtor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

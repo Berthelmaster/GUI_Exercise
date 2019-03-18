@@ -25,6 +25,7 @@ namespace SWD_GUI_assignment
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
 
         private void BtnForward_OnClick(object sender, RoutedEventArgs e)

@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:SWD_GUI_assignment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-<!--    DataContext="{Binding Source={StaticResource AddDebtorViewModelLocator}, Path=AddDebtorViewModel}">-->
         
     <Grid>  
         <StackPanel>
