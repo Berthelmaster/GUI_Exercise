@@ -18,7 +18,7 @@ namespace SWD_GUI_assignment.Model
         public AccountCollection()
         {
             debtors = new ObservableCollection<AccountModel>();
-            debtors.Add(new AccountModel("Apollo", 1000000));
+            debtors.Add(new AccountModel("Poul Poulsen", 400));
             debtors.Add(new AccountModel("Jens Jensen", -200));
         }
 
