@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SWD_GUI_assignment"
         mc:Ignorable="d"
-        Title="Debtor Overview" Height="370" Width="300"
-        DataContext="{Binding Source={StaticResource DebtorOverviewViewModelLocator}, Path=DebtorOverviewViewModel}">
+        Title="Debtor Overview" Height="370" Width="300">
+    <!--DataContext="{Binding Source={StaticResource DebtorOverviewViewModelLocator}, Path=DebtorOverviewViewModel}">-->
         
     <Grid>
         <Grid.RowDefinitions>
